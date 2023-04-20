@@ -11,6 +11,9 @@
 		6FBEFD2229F1722F0082E116 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBEFD2129F1722F0082E116 /* ContentView.swift */; };
 		6FBEFD2429F172320082E116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBEFD2329F172320082E116 /* Assets.xcassets */; };
 		6FBEFD2729F172320082E116 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBEFD2629F172320082E116 /* Preview Assets.xcassets */; };
+		6FBEFD3029F177ED0082E116 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBEFD2F29F177ED0082E116 /* NetworkService.swift */; };
+		6FBEFD3229F178BF0082E116 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBEFD3129F178BF0082E116 /* Card.swift */; };
+		6FBEFD3629F178EA0082E116 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 6FBEFD3529F178EA0082E116 /* Blackbird */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		6FBEFD2129F1722F0082E116 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FBEFD2329F172320082E116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FBEFD2629F172320082E116 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FBEFD2F29F177ED0082E116 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6FBEFD3129F178BF0082E116 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBEFD3629F178EA0082E116 /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				6FBEFD1F29F1722F0082E116 /* WarApp.swift */,
-				6FBEFD2129F1722F0082E116 /* ContentView.swift */,
+				6FBEFD3329F178C50082E116 /* Model */,
+				6FBEFD2E29F177D60082E116 /* Services */,
+				6FBEFD2D29F1755B0082E116 /* Views */,
 				6FBEFD2329F172320082E116 /* Assets.xcassets */,
 				6FBEFD2529F172320082E116 /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				6FBEFD2629F172320082E116 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6FBEFD2D29F1755B0082E116 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FBEFD2129F1722F0082E116 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6FBEFD2E29F177D60082E116 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6FBEFD2F29F177ED0082E116 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6FBEFD3329F178C50082E116 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6FBEFD3129F178BF0082E116 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = War;
+			packageProductDependencies = (
+				6FBEFD3529F178EA0082E116 /* Blackbird */,
+			);
 			productName = War;
 			productReference = 6FBEFD1C29F1722F0082E116 /* War.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 6FBEFD1329F1722F0082E116;
+			packageReferences = (
+				6FBEFD3429F178EA0082E116 /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = 6FBEFD1D29F1722F0082E116 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FBEFD2229F1722F0082E116 /* ContentView.swift in Sources */,
+				6FBEFD3029F177ED0082E116 /* NetworkService.swift in Sources */,
 				6FBEFD2029F1722F0082E116 /* WarApp.swift in Sources */,
+				6FBEFD3229F178BF0082E116 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6FBEFD3429F178EA0082E116 /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FBEFD3529F178EA0082E116 /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FBEFD3429F178EA0082E116 /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FBEFD1429F1722F0082E116 /* Project object */;
 }
